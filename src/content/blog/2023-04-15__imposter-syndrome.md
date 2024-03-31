@@ -1,5 +1,5 @@
 ---
-title: 🔥 Hot Take: You Don't Really Have Imposter Syndrome
+title: "🔥 Hot Take: You Don't Really Have Imposter Syndrome"
 publishedAt: 2023-04-15
 origin: twitter
 type: atomic essay

@@ -1,5 +1,5 @@
 ---
-title: A Love Letter: What a Great Time to Be in Tech
+title: "A Love Letter: What a Great Time to Be in Tech"
 publishedAt: 2023-05-26
 origin: twitter
 type: atomic essay

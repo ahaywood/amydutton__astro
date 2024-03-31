@@ -7,7 +7,7 @@ const blogCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
-    publishedAt: z.string(),
+    publishedAt: z.date(),
     origin: z.enum(['hashnode', 'medium', 'devto', 'twitch', 'youtube', 'tiktok', 'twitter', 'podcast', 'post']),
     type: z.enum(['video', 'article', 'stream', 'podcast', 'atomic essay']),
     link: z.string().optional(),
