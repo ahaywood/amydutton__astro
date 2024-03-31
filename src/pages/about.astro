@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Bio from "../components/Bio.svelte";
+import VennDiagram from "../components/VennDiagram.astro";
+import IBelieve from "../components/IBelieve.astro";
+import BioBento from "../components/BioBento.astro";
+import LongBio from "../components/LongBio.astro";
+---
+
+<BaseLayout>
+  <div class="bg-gradient bg-no-repeat bg-interiorHeader">
+    <Header>
+      <div class="text-selectiveYellow">This is Me.</div>
+      <div>
+        Who I am, What I do, <span
+          class="font-serif italic text-selectiveYellow">&</span
+        > Why
+      </div>
+    </Header>
+
+    <main>
+      <Bio />
+      <VennDiagram />
+      <IBelieve />
+      <BioBento />
+      <LongBio />
+    </main>
+  </div>
+</BaseLayout>

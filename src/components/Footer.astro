@@ -1,0 +1,24 @@
+---
+import { constants } from "../lib/constants";
+import SocialMedia from "./SocialMedia.svelte";
+const getCurrentYear = () => new Date().getFullYear();
+---
+
+<footer class="border-t-1 border-roti pt-20 pb-8 text-center">
+  <SocialMedia />
+
+  <!-- LEGAL -->
+  <p class="mb-6 legal">
+    <a href="/privacy">Privacy Policy</a> _ <a href="/terms"
+      >Terms and Conditions</a
+    > _ <a href="/disclaimers">Disclaimers</a>
+  </p>
+
+  <!-- COPYRIGHT -->
+  <p class="copyright">
+    Copyright &copy;{getCurrentYear()}
+    <a href={constants.AHHA} target="_blank" rel="norefferer"
+      >Ah Ha Creative, LLC</a
+    >. All Rights Reserved.
+  </p>
+</footer>

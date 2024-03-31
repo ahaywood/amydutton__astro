@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply p-0 m-0 scroll-smooth bg-black text-white
+  }
+
+  input[type=radio] { @apply hidden; }
+  label:has(input[type=radio]) { @apply bg-[url("/images/radio--unchecked.svg")] bg-no-repeat bg-leftCenter pl-6 text-lg cursor-pointer; }
+  label:has(input[type=radio]:checked) { @apply bg-[url("/images/radio--checked.svg")] }
+
+  nav ul li {
+    @apply mb-6;
+    a { @apply font-condensed uppercase text-[130px] leading-[100px]; }
+  }
+
+  svg {
+    @apply fill-current;
+  }
+}
+
+@layer components {
+  .section-heading {
+    @apply font-serif text-selectiveYellow uppercase italic text-4xl text-center
+  }
+
+  nav {
+    ul li a { @apply hover:text-selectiveYellow; }
+    .social-media {
+      @apply flex items-center gap-x-5;
+    }
+  }
+
+
+  footer {
+    .copyright a,
+    .legal a { @apply hover:text-selectiveYellow border-b-1 border-transparent hover:border-b-selectiveYellow }
+    .social-media { @apply flex items-center justify-center gap-8 mb-16 text-selectiveYellow;
+      a { @apply hover:text-white; }
+    }
+  }
+
+  .parade {
+    animation: scroll 15s linear finite;
+  }
+}
+
+@layer utilities {
+  .center {
+    @apply flex items-center justify-center
+  }
+
+  .page-grid {
+    @apply grid grid-cols-12 gap-x-5 px-10;
+  }
+}

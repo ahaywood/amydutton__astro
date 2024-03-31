@@ -1,0 +1,116 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Color from "../components/Color.astro";
+import Alaphabet from "../components/Alaphabet.astro";
+---
+
+<BaseLayout>
+  <div class="bg-gradient bg-no-repeat bg-interiorHeader">
+    <Header>
+      <div class="text-selectiveYellow">you’re my kind of person.</div>
+      the tech <span class="text-selectiveYellow font-serif italic">&</span> tools
+      that shape this site.
+    </Header>
+
+    <main class="page-grid">
+      <div class="col-span-9 col-start-4">
+        <p class="mb-10">
+          This website is built on <a
+            href="https://astro.build"
+            target="_blank"
+            rel="noreferrer">Astro</a
+          >, styled with <a
+            href="https://tailwindcss.com"
+            target="_blank"
+            rel="noreferrer">Tailwind CSS</a
+          >, and hosted on <a
+            href="https://vercel.com"
+            target="_blank"
+            rel="noreferrer">Vercel</a
+          >.
+        </p>
+        <ul class="flex items-center justify-between mb-[140px]">
+          <li>
+            <a href="https://astro.build" target="_blank"
+              ><img src="/images/logo__astro.svg" alt="Astro" /></a
+            >
+          </li>
+          <li>
+            <a href="https://tailwindcss.com" target="_blank" rel="noreferrer">
+              <img src="/images/logo__tailwindcss.svg" alt="Tailwind CSS" /></a
+            >
+          </li>
+          <li>
+            <a href="https://vercel.com" target="_blank" rel="noreferrer">
+              <img src="/images/logo__vercel.svg" alt="Vercel" /></a
+            >
+          </li>
+        </ul>
+
+        <h2 class="section-heading text-left mb-8">Colors</h2>
+        <div class="flex gap-10 mb-[140px]">
+          <Color hex="#ffb700" />
+          <Color hex="#000000" />
+          <Color hex="#FFFFFF" />
+        </div>
+
+        <h2 class="section-heading text-left mb-8">Typography</h2>
+        <div class="grid grid-cols-2 gap-5 mb-[140px]">
+          <Alaphabet font="Avenir Next" className="font-sans" />
+          <Alaphabet font="DM Serif Display" className="font-serif" />
+          <Alaphabet font="Roboto Mono" className="font-mono" />
+          <Alaphabet font="Bebas Neue" className="font-condensed" />
+        </div>
+
+        <h2 class="section-heading text-left mb-8">My Logo</h2>
+        <div class="grid grid-cols-9 gap-x-5 mb-[140px]">
+          <div class="col-span-5">
+            <p class="leading-loose">
+              My logo was designed by the talented <a
+                class="font-bold underline text-neutral-400"
+                href="https://www.micah.design/"
+                target="_blank"
+                rel="noreferrer">Micah Lanier</a
+              >. The hardest person to design for if yourself. So, Micah
+              graciously helped me and designed this mark 12+ years ago. I’ve
+              used it ever since.
+            </p>
+          </div>
+          <div class="col-span-4"></div>
+        </div>
+
+        <h2 class="section-heading">Want to get more specific?</h2>
+        <div>
+          <div>
+            I wrote a blog post on Medium, all about the branding and site
+            design.
+          </div>
+          <div>
+            <img src="/images/logo__medium.svg" alt="Medium" />
+          </div>
+        </div>
+
+        <div>
+          <div>
+            Want to get even more specific? I’ve open sourced the code and made
+            it publicly available on GitHub.
+          </div>
+          <div>
+            <img src="/images/logo__github.svg" alt="GitHub" />
+          </div>
+        </div>
+
+        <div>
+          <div>
+            I wrote a blog post on Medium, all about the branding and site
+            design.
+          </div>
+          <div>
+            <img src="/images/logo__hashnode.svg" alt="Hashnode" />
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</BaseLayout>

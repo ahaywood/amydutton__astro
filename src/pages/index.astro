@@ -1,0 +1,96 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.svelte";
+---
+
+<script>
+  const scroller = document.getElementById("scroller");
+  const logos = document.getElementById("parade");
+
+  function duplicateLogos() {
+    const clone = logos?.cloneNode(true);
+    if (scroller && clone) scroller?.appendChild(clone);
+  }
+
+  duplicateLogos();
+</script>
+
+<BaseLayout>
+  <!-- I'm sticking the gradient in a wrapping div so that it will span across 2 sections -->
+  <div class="bg-gradient bg-no-repeat">
+    <!-- hero -->
+    <header class="font-condensed relative border-b-1 border-selectiveYellow">
+      <div class="absolute left-[180px] -top-10">
+        <img src="/images/amy.svg" alt="Amy" width="582" />
+        <h1
+          class="text-[107px] leading-[80px] relative -top-16 w-[700px] font-condensed"
+        >
+          I live at the intersection of design <span
+            class="text-selectiveYellow font-serif">&</span
+          > code.
+        </h1>
+      </div>
+
+      <img src="/images/headshot.png" alt="" class="float-right mb-1" />
+
+      <br clear="both" />
+    </header>
+  </div>
+
+  <!-- I'VE WORKED ON -->
+  <section class="py-16">
+    <h2 class="section-heading mb-16">I've Worked On</h2>
+
+    <div id="scroller" class="overflow-hidden w-full whitespace-nowrap">
+      <ul
+        id="parade"
+        class="inline-flex gap-[100px] animate-[scroll_linear_60s_infinite] px-10 justify-center items-center"
+      >
+        <li>
+          <img
+            src="/images/worked-with/logo__janet-jackson.png"
+            srcset="/images/worked-with/janet-jackson@2x.png 2x /images/worked-with/janet-jackson.png"
+            alt="Janet Jackson"
+          />
+        </li>
+
+        <li>
+          <img
+            src="/images/worked-with/logo__counting-crows.png"
+            srcset="/images/worked-with/counting-crows@2x.png 2x /images/worked-with/counting-crows.png"
+            alt="Counting Crows"
+          />
+        </li>
+
+        <li>
+          <img
+            src="/images/worked-with/logo__ice-cube.png"
+            srcset="/images/worked-with/ice-cube@2x.png 2x /images/worked-with/ice-cube.png"
+            alt="Ice Cube"
+          />
+        </li>
+        <li>
+          <img
+            src="/images/worked-with/logo__kelly-clarkson.png"
+            srcset="/images/worked-with/kelly-clarkson@2x.png 2x /images/worked-with/kelly-clarkson.png"
+            alt="Kelly Clarkson"
+          />
+        </li>
+        <li>
+          <img
+            src="/images/worked-with/logo__kanye-west.png"
+            srcset="/images/worked-with/kanye-west@2x.png 2x /images/worked-with/kanye-west.png"
+            alt="Kanye West"
+          />
+        </li>
+        <li>
+          <img
+            src="/images/worked-with/logo__dolly.png"
+            srcset="/images/worked-with/dolly@2x.png 2x /images/worked-with/dolly.png"
+            alt="Dolly Parton"
+          />
+        </li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

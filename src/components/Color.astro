@@ -1,0 +1,12 @@
+---
+const { hex } = Astro.props;
+---
+
+<div class="flex flex-col items-center gap-4">
+  <div
+    class="w-[100px] h-[100px] rounded-full border-1 border-[#363636]"
+    style={{ backgroundColor: hex }}
+  >
+  </div>
+  <div class="font-mono text-base uppercase">{hex}</div>
+</div>
