@@ -22,6 +22,8 @@ const courseCollection = defineCollection({
     description: z.string(),
     publishedAt: z.string(),
     link: z.string(),
+    image: z.string(),
+    order: z.number(),
   }),
 });
 
