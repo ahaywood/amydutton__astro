@@ -3,7 +3,7 @@
   import {constants} from "../lib/constants";
 </script>
 
-<section class="page-grid pt-20 pb-[140px]">
+<section class="page-grid pt-20 pb-[140px] border-b-1 border-selectiveYellow">
   <div class="col-start-2 col-span-5">
     <div class="flex justify-between">
       <h2 class="section-heading left-align text-white">Bio</h2>

@@ -7,9 +7,7 @@ export default {
 				gradient: "url('/images/gradient.svg')"
 			},
 			backgroundPosition: {
-				interiorHeader: "-278px -150px"
-			},
-			backgroundPosition: {
+				interiorHeader: "-278px -150px",
 				leftCenter: "left center"
 			},
 			borderWidth: {
