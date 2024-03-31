@@ -2,6 +2,7 @@
 
 export type IconName =
   | "arrow--right"
+  | "arrow-circle"
   | "attachment"
   | "codepen"
   | "github"

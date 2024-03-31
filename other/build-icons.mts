@@ -8,8 +8,9 @@ const cwd = process.cwd()
 const inputDir = path.join(cwd, 'other', 'svg-icons')
 const inputDirRelative = path.relative(cwd, inputDir)
 const outputDir = path.join(cwd, 'src', 'components', 'Icon')
-const iconDir = path.join(cwd, 'public', 'images', 'icons')
 await fsExtra.ensureDir(outputDir)
+const iconDir = path.join(cwd, 'public', 'images', 'icons')
+await fsExtra.ensureDir(iconDir)
 
 const files = glob
   .sync('**/*.svg', {
@@ -27,7 +28,7 @@ if (files.length === 0) {
 }
 
 async function generateIconFiles() {
-  const spriteFilepath = path.join(outputDir, 'sprite.svg')
+  const spriteFilepath = path.join(iconDir, 'sprite.svg')
   const typeOutputFilepath = path.join(outputDir, 'name.d.ts')
   const currentSprite = await fsExtra
     .readFile(spriteFilepath, 'utf8')
