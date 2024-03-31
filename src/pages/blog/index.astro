@@ -1,0 +1,34 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import BlogFilter from "../../components/BlogFilter.astro";
+import Newsletter from "../../components/Newsletter.astro";
+
+const allBlogPosts = await getCollection("blog");
+---
+
+<BaseLayout>
+  <div class="bg-gradient bg-no-repeat bg-interiorHeader">
+    <Header />
+
+    <main class="page-grid relative -mt-[250px]">
+      <div class="col-start-4 col-span-7 mb-[140px]">
+        <div class="mb-[180px]"><BlogFilter /></div>
+
+        {
+          allBlogPosts.map((post) => {
+            return (
+              // <article>
+              //   <h2>{post.data.title}</h2>
+              //   <p>{post.data.description}</p>
+              // </article>
+              <article>Something</article>
+            );
+          })
+        }
+      </div>
+      <Newsletter />
+    </main>
+  </div></BaseLayout
+>

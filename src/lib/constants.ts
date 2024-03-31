@@ -8,6 +8,7 @@ export const constants = Object.freeze({
   HEADSHOT: "",
   LINKEDIN: "https://linkedin.com/in/amy-dutton",
   MEDIUM: "",
+  PAGE_SIZE: 10,
   TIKTOK: "https://tiktok.com/selfteachme",
   TITLE: "Amy Dutton",
   TWITTER: "https://twitter.com/selfteachme",
